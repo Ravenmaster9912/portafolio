@@ -1,16 +1,290 @@
+:root {
+    --bg-principal: #0a0a0c;
+    --bg-secundario: #121216;
+    --bg-tarjeta: #1a1a24;
+    --morado-principal: #9d4edd;
+    --morado-brillante: #c77dff;
+    --texto-blanco: #f8f9fa;
+    --texto-mutado: #94a3b8;
+    --borde: rgba(157, 78, 221, 0.15);
+    --transicion: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #008080;
+    background-color: var(--bg-principal);
+    color: var(--texto-blanco);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 10, 12, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo {
+    font-family: 'Fira Code', monospace;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.logo span {
+    color: var(--morado-principal);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    font-size: 0.95rem;
+    color: var(--texto-mutado);
+    transition: var(--transicion);
+}
+
+.nav-links a:hover {
+    color: var(--morado-brillante);
+}
+
+#home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
     padding-top: 100px;
 }
 
-.window{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    align-items: center;
 }
 
-.title-bar{
-    cursor: move;
+.hero-mono {
+    font-family: 'Fira Code', monospace;
+    color: var(--morado-principal);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.hero-titulo {
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+.hero-titulo span {
+    background: linear-gradient(45deg, var(--morado-principal), var(--morado-brillante));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-descripcion {
+    color: var(--texto-mutado);
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+
+.hero-foto-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto-glow {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    background: var(--morado-principal);
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.2;
+    z-index: 1;
+    animation: pulsarGlow 6s infinite alternate ease-in-out;
+}
+
+.foto-perfil {
+    position: relative;
+    z-index: 2;
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 24px;
+    border: 1px solid rgba(157, 78, 221, 0.25);
+    filter: grayscale(40%) brightness(0.9);
+    transition: var(--transicion);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.hero-foto-wrapper:hover .foto-perfil {
+    filter: grayscale(0%) brightness(1);
+    border-color: var(--morado-brillante);
+    transform: scale(1.02) translateY(-5px);
+    box-shadow: 0 25px 50px rgba(157, 78, 221, 0.15);
+}
+
+@keyframes pulsarGlow {
+    0% { transform: scale(0.9); opacity: 0.15; }
+    100% { transform: scale(1.1); opacity: 0.3; }
+}
+
+.btn {
+    display: inline-block;
+    background: transparent;
+    color: var(--texto-blanco);
+    border: 1px solid var(--morado-principal);
+    padding: 0.8rem 2rem;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: var(--transicion);
+}
+
+.btn:hover {
+    background: var(--morado-principal);
+    box-shadow: 0 0 25px rgba(157, 78, 221, 0.4);
+    transform: translateY(-2px);
+}
+
+section { padding: 100px 0; }
+
+.seccion-titulo {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.seccion-titulo::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: var(--morado-principal);
+    border-radius: 2px;
+}
+
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.proyecto-tarjeta {
+    background-color: var(--bg-secundario);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: var(--transicion);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.proyecto-tarjeta:hover {
+    transform: translateY(-5px);
+    border-color: var(--morado-principal);
+    box-shadow: 0 10px 30px rgba(157, 78, 221, 0.05);
+}
+
+.proyecto-tech {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
+    color: var(--morado-brillante);
+    margin-bottom: 1rem;
+}
+
+.proyecto-titulo { font-size: 1.4rem; margin-bottom: 1rem; }
+.proyecto-desc { color: var(--texto-mutado); font-size: 0.95rem; margin-bottom: 1.5rem; }
+.proyecto-link { font-size: 0.9rem; font-weight: 600; color: var(--texto-blanco); }
+.proyecto-link:hover { color: var(--morado-brillante); }
+
+.skills-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 700px;
+}
+
+.skill-item {
+    background: var(--bg-secundario);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    transition: var(--transicion);
+}
+
+.skill-item:hover {
+    border-color: var(--morado-principal);
+    color: var(--morado-brillante);
+}
+
+#contacto { text-align: center; max-width: 600px; margin: 0 auto; }
+#contacto p { color: var(--texto-mutado); margin-bottom: 2rem; }
+footer {
+    padding: 4rem 0 2rem 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    font-size: 0.85rem;
+    color: var(--texto-mutado);
+}
+footer p span { color: var(--morado-principal); }
+
+@media (max-width: 900px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+    }
+    .hero-foto-wrapper {
+        grid-row: 1;
+    }
+    .foto-perfil {
+        width: 240px;
+        height: 280px;
+    }
+    .hero-titulo { font-size: 2.5rem; }
+    .nav-links { display: none; }
+    section { padding: 60px 0; }
 }

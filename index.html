@@ -3,28 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
-    <link rel="stylesheet" href="https://unpkg.com/98.css">
+    <title>TuNombre | Web Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="window" style="width: 300px; height: 200px;">
-        <div class="title-bar">
-            <div class="title-bar-text">Una ventana XD</div>
-            <div class="title-bar-controls">
-            <button aria-label="Minimize"></button>
-            <button aria-label="Maximize"></button>
-            <button aria-label="Close"></button>
+
+    <header>
+        <div class="contenedor nav-container">
+            <div class="logo">&lt;Daniel Martinez <span>/</span>&gt;</div>
+            <nav class="nav-links">
+                <a href="#home">Inicio</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#skills">Habilidades</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="contenedor hero-grid">
+            
+            <div class="hero-texto">
+                <span class="hero-mono">Hola, mi nombre es Daniel</span>
+                <h1 class="hero-titulo">Desarrollo <span>experiencias web</span> minimalistas y eficientes.</h1>
+                <p class="hero-descripcion">Soy un desarrollador web fullstack, especializado en crear interfaces limpias, modernas y con un rendimiento excepcional.</p>
+                <a href="#contacto" class="btn">Hablemos</a>
+            </div>
+
+            <div class="hero-foto-wrapper">
+                <div class="foto-glow"></div>
+                <!-- REEMPLAZA ESTA URL CON TU FOTO REAL -->
+                <img src="assets/img/yo.jpg" alt="Foto de Perfil" class="foto-perfil">
+            </div>
+
+        </div>
+    </section>
+
+    <section id="proyectos">
+        <div class="contenedor">
+            <h2 class="seccion-titulo">Proyectos Destacados</h2>
+            <div class="proyectos-grid">
+                <div class="proyecto-tarjeta">
+                    <div>
+                        <div class="proyecto-tech">React · Node.js · Tailwind</div>
+                        <h3 class="proyecto-titulo">E-Commerce Platform</h3>
+                        <p class="proyecto-desc">Una tienda en línea con pasarela de pagos integrada, renderizado del lado del servidor y un panel de administración minimalista.</p>
+                    </div>
+                    <a href="#" class="proyecto-link">Ver proyecto en vivo →</a>
+                </div>
+                <div class="proyecto-tarjeta">
+                    <div>
+                        <div class="proyecto-tech">Next.js · TypeScript · GraphQL</div>
+                        <h3 class="proyecto-titulo">SaaS Dashboard</h3>
+                        <p class="proyecto-desc">Panel de control analítico optimizado para el manejo de datos masivos en tiempo real con gráficas interactivas.</p>
+                    </div>
+                    <a href="#" class="proyecto-link">Ver caso de estudio →</a>
+                </div>
+                <div class="proyecto-tarjeta">
+                    <div>
+                        <div class="proyecto-tech">Vue.js · Firebase</div>
+                        <h3 class="proyecto-titulo">Task Manager App</h3>
+                        <p class="proyecto-desc">Aplicación de gestión de tareas con sincronización en la nube y modo offline compatible con PWA.</p>
+                    </div>
+                    <a href="#" class="proyecto-link">Ver repositorio GitHub →</a>
+                </div>
             </div>
         </div>
-        <div class="window-body">
-            <p>Aqui se van a poner weas</p>
-        </div>
-        <div class="window-body" style="background-color: white; height : 115px; text-align: center;">
-            <h3>XD</h3>
-        </div>
-    </div>
+    </section>
 
-    <script src="scripts.js"></script>
+    <section id="skills">
+        <div class="contenedor">
+            <h2 class="seccion-titulo">Tecnologías</h2>
+            <div class="skills-lista">
+                <div class="skill-item">JavaScript (ES6+)</div>
+                <div class="skill-item">TypeScript</div>
+                <div class="skill-item">React / Next.js</div>
+                <div class="skill-item">HTML5 & CSS3</div>
+                <div class="skill-item">Node.js</div>
+                <div class="skill-item">Tailwind CSS</div>
+                <div class="skill-item">Git & GitHub</div>
+                <div class="skill-item">REST APIs</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <div class="contenedor">
+            <h2 class="seccion-titulo">¿Tienes un proyecto en mente?</h2>
+            <p>Estoy disponible para trabajos freelance o puestos de tiempo completo. Si buscas a alguien detallista que valore el diseño limpio y el código bien estructurado, escríbeme.</p>
+            <a href="mailto:tuemail@dominio.com" class="btn">Enviar un correo</a>
+        </div>
+    </section>
+
+    <footer>
+        <p><span>2026.</span> Daniel Martinez.</p>
+    </footer>
+
 </body>
 </html>
