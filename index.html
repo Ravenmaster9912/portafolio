@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TuNombre | Web Developer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Daniel Martinez | Web Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/win98icon.png">
 </head>
 <body>
 
@@ -35,7 +36,6 @@
 
             <div class="hero-foto-wrapper">
                 <div class="foto-glow"></div>
-                <!-- REEMPLAZA ESTA URL CON TU FOTO REAL -->
                 <img src="assets/img/yo.jpg" alt="Foto de Perfil" class="foto-perfil">
             </div>
 
@@ -46,29 +46,47 @@
         <div class="contenedor">
             <h2 class="seccion-titulo">Proyectos Destacados</h2>
             <div class="proyectos-grid">
-                <div class="proyecto-tarjeta">
+                <div class="proyecto-tarjeta" id="moodle">
                     <div>
-                        <div class="proyecto-tech">React · Node.js · Tailwind</div>
-                        <h3 class="proyecto-titulo">E-Commerce Platform</h3>
-                        <p class="proyecto-desc">Una tienda en línea con pasarela de pagos integrada, renderizado del lado del servidor y un panel de administración minimalista.</p>
+                        <div class="proyecto-tech">Laravel · PHP · Bootstrap · JS · MariaDB</div>
+                        <h3 class="proyecto-titulo">Moodle-groups</h3>
+                        <p class="proyecto-desc">Plataforma universitaria que gestiona categorias, cursos y grupos de moodle e implementa automatizacion de registros.<p>
                     </div>
-                    <a href="#" class="proyecto-link">Ver proyecto en vivo →</a>
+                    <div style="text-align: center;">
+                        <img src="assets/img/user.jpg" alt="MOODLE" style="width: 100%;">
+                    </div>
+                    <!--<a href="#" class="proyecto-link">(Proyecto Privado)</a>-->
+                    <p class="proyecto-link">(Proyecto Privado)</p>
+                </div>
+                <div class="proyecto-tarjeta" id="mips">
+                    <div>
+                        <div class="proyecto-tech">Verilog · ModelSim</div>
+                        <h3 class="proyecto-titulo">MIPS Datapath</h3>
+                        <p class="proyecto-desc">Procesador en verilog que simula la arquitectura MIPS.</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="assets/img/mips.jpg" alt="MIPS" style="width: 100%;">
+                    </div>
+                    <a href="https://github.com/Ravenmaster9912/procesador-mips" class="proyecto-link">Ver repositorio GitHub →</a>
                 </div>
                 <div class="proyecto-tarjeta">
                     <div>
-                        <div class="proyecto-tech">Next.js · TypeScript · GraphQL</div>
-                        <h3 class="proyecto-titulo">SaaS Dashboard</h3>
-                        <p class="proyecto-desc">Panel de control analítico optimizado para el manejo de datos masivos en tiempo real con gráficas interactivas.</p>
+                        <div class="proyecto-tech">Python · PostgreSQL</div>
+                        <h3 class="proyecto-titulo">Sistema de gestión de inventario</h3>
+                        <p class="proyecto-desc">Aplicación de gestión de inventario de componentes de computo y personal.</p>
                     </div>
-                    <a href="#" class="proyecto-link">Ver caso de estudio →</a>
+                    <div style="text-align: center;">
+                        <img src="assets/img/sgptcc.jpg" alt="SGPTCC" style="width: 100%;">
+                    </div>
+                    <a href="https://github.com/Ravenmaster9912/sistema-de-gestion-de-componentes" class="proyecto-link">Ver repositorio GitHub →</a>
                 </div>
                 <div class="proyecto-tarjeta">
                     <div>
-                        <div class="proyecto-tech">Vue.js · Firebase</div>
-                        <h3 class="proyecto-titulo">Task Manager App</h3>
-                        <p class="proyecto-desc">Aplicación de gestión de tareas con sincronización en la nube y modo offline compatible con PWA.</p>
+                        <div class="proyecto-tech">C++</div>
+                        <h3 class="proyecto-titulo">Sistema de gestión de llamadas.</h3>
+                        <p class="proyecto-desc">Aplicación de gestión de llamadas y personal.</p>
                     </div>
-                    <a href="#" class="proyecto-link">Ver repositorio GitHub →</a>
+                    <a href="https://github.com/Ravenmaster9912/sistema-call-center" class="proyecto-link">Ver repositorio GitHub →</a>
                 </div>
             </div>
         </div>
@@ -78,14 +96,16 @@
         <div class="contenedor">
             <h2 class="seccion-titulo">Tecnologías</h2>
             <div class="skills-lista">
-                <div class="skill-item">JavaScript (ES6+)</div>
-                <div class="skill-item">TypeScript</div>
-                <div class="skill-item">React / Next.js</div>
+                <div class="skill-item">Laravel</div>
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">PHP</div>
                 <div class="skill-item">HTML5 & CSS3</div>
-                <div class="skill-item">Node.js</div>
-                <div class="skill-item">Tailwind CSS</div>
+                <div class="skill-item">JQuery</div>
+                <div class="skill-item">PostgreSQL</div>
                 <div class="skill-item">Git & GitHub</div>
                 <div class="skill-item">REST APIs</div>
+                <div class="skill-item">Python</div>
+                <div class="skill-item">VS Code</div>
             </div>
         </div>
     </section>
@@ -94,7 +114,7 @@
         <div class="contenedor">
             <h2 class="seccion-titulo">¿Tienes un proyecto en mente?</h2>
             <p>Estoy disponible para trabajos freelance o puestos de tiempo completo. Si buscas a alguien detallista que valore el diseño limpio y el código bien estructurado, escríbeme.</p>
-            <a href="mailto:tuemail@dominio.com" class="btn">Enviar un correo</a>
+            <a href="mailto:josedanielmartinez9912@hotmail.com" class="btn">Enviar un correo</a>
         </div>
     </section>
 
