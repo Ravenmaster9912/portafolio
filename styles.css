@@ -79,6 +79,19 @@ header {
     color: var(--morado-brillante);
 }
 
+.nav-links button{
+    font-size: 0.95rem;
+    color: var(--texto-mutado);
+    transition: var(--transicion);  
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-links button:hover{
+    color: var(--morado-brillante);
+}
+
 #home {
     min-height: 100vh;
     display: flex;

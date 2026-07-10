@@ -16,10 +16,15 @@
         <div class="contenedor nav-container">
             <div class="logo">&lt;Daniel Martinez <span>/</span>&gt;</div>
             <nav class="nav-links">
-                <a href="#home">Inicio</a>
-                <a href="#proyectos">Proyectos</a>
-                <a href="#skills">Habilidades</a>
-                <a href="#contacto">Contacto</a>
+                <a href="#home" data-i18n="inicio">Inicio</a>
+                <a href="#proyectos" data-i18n="proyectos">Proyectos</a>
+                <a href="#skills" data-i18n="habilidades">Habilidades</a>
+                <a href="#contacto" data-i18n="contacto">Contacto</a>
+                [
+                <button onclick="switchLanguage('es')" class="lang">Español</button>
+                |
+                <button onclick="switchLanguage('en')" class="lang">English</button>
+                ]
             </nav>
         </div>
     </header>
@@ -28,10 +33,10 @@
         <div class="contenedor hero-grid">
             
             <div class="hero-texto">
-                <span class="hero-mono">Hola, mi nombre es Daniel</span>
-                <h1 class="hero-titulo">Desarrollo <span>experiencias web</span> minimalistas y eficientes.</h1>
-                <p class="hero-descripcion">Soy un desarrollador web fullstack, especializado en crear interfaces limpias, modernas y con un rendimiento excepcional.</p>
-                <a href="#contacto" class="btn">Hablemos</a>
+                <span class="hero-mono" data-i18n="saludo">Hola, mi nombre es Daniel</span>
+                <h1 class="hero-titulo" data-i18n="titulo">Desarrollo <span>experiencias web</span> minimalistas y eficientes.</h1>
+                <p class="hero-descripcion" data-i18n="descripcion">Soy un desarrollador web fullstack, especializado en crear interfaces limpias, modernas y con un rendimiento excepcional.</p>
+                <a href="#contacto" class="btn" data-i18n="hablemos">Hablemos</a>
             </div>
 
             <div class="hero-foto-wrapper">
@@ -44,57 +49,68 @@
 
     <section id="proyectos">
         <div class="contenedor">
-            <h2 class="seccion-titulo">Proyectos Destacados</h2>
+            <h2 class="seccion-titulo" data-i18n="proyectos_destacados">Proyectos Destacados</h2>
             <div class="proyectos-grid">
                 <div class="proyecto-tarjeta" id="moodle">
                     <div>
                         <div class="proyecto-tech">Laravel · PHP · Bootstrap · JS · MariaDB</div>
                         <h3 class="proyecto-titulo">Moodle-groups</h3>
-                        <p class="proyecto-desc">Plataforma universitaria que gestiona categorias, cursos y grupos de moodle e implementa automatizacion de registros.<p>
+                        <p class="proyecto-desc" data-i18n="moodle_descripcion">Plataforma universitaria que gestiona categorias, cursos y grupos de moodle e implementa automatizacion de registros.<p>
                     </div>
                     <div style="text-align: center;">
                         <img src="assets/img/user.jpg" alt="MOODLE" style="width: 100%;">
                     </div>
                     <!--<a href="#" class="proyecto-link">(Proyecto Privado)</a>-->
-                    <p class="proyecto-link">(Proyecto Privado)</p>
+                    <p class="proyecto-link" data-i18n="moodle_link">(Proyecto Privado)</p>
                 </div>
                 <div class="proyecto-tarjeta" id="mips">
                     <div>
                         <div class="proyecto-tech">Verilog · ModelSim</div>
                         <h3 class="proyecto-titulo">MIPS Datapath</h3>
-                        <p class="proyecto-desc">Procesador en verilog que simula la arquitectura MIPS.</p>
+                        <p class="proyecto-desc" data-i18n="mips_descripcion">Procesador en verilog que simula la arquitectura MIPS.</p>
                     </div>
                     <div style="text-align: center;">
                         <img src="assets/img/mips.jpg" alt="MIPS" style="width: 100%;">
                     </div>
-                    <a href="https://github.com/Ravenmaster9912/procesador-mips" class="proyecto-link">Ver repositorio GitHub →</a>
+                    <a href="https://github.com/Ravenmaster9912/procesador-mips" class="proyecto-link" data-i18n="proyecto_link">Ver repositorio GitHub →</a>
                 </div>
                 <div class="proyecto-tarjeta">
                     <div>
                         <div class="proyecto-tech">Python · PostgreSQL</div>
-                        <h3 class="proyecto-titulo">Sistema de gestión de inventario</h3>
-                        <p class="proyecto-desc">Aplicación de gestión de inventario de componentes de computo y personal.</p>
+                        <h3 class="proyecto-titulo" data-i18n="sgi_titulo">Sistema de gestión de inventario</h3>
+                        <p class="proyecto-desc" data-i18n="sgi_descripcion">Aplicación de gestión de inventario de componentes de computo y personal.</p>
                     </div>
                     <div style="text-align: center;">
                         <img src="assets/img/sgptcc.jpg" alt="SGPTCC" style="width: 100%;">
                     </div>
-                    <a href="https://github.com/Ravenmaster9912/sistema-de-gestion-de-componentes" class="proyecto-link">Ver repositorio GitHub →</a>
+                    <a href="https://github.com/Ravenmaster9912/sistema-de-gestion-de-componentes" class="proyecto-link" data-i18n="proyecto_link">Ver repositorio GitHub →</a>
                 </div>
                 <div class="proyecto-tarjeta">
                     <div>
                         <div class="proyecto-tech">Python · QTDesigner</div>
-                        <h3 class="proyecto-titulo">Registro de particulas.</h3>
-                        <p class="proyecto-desc">Programa de escritorio en el cual se implemente el uso de grafos para calcular la distancia de particulas.</p>
+                        <h3 class="proyecto-titulo" data-i18n="particulas_titulo">Registro de particulas.</h3>
+                        <p class="proyecto-desc" data-i18n="particulas_descripcion">Programa de escritorio en el cual se implemente el uso de grafos para calcular la distancia de particulas.</p>
                     </div>
-                    <a href="https://github.com/Ravenmaster9912/particulas.git" class="proyecto-link">Ver repositorio GitHub →</a>
+                    <a href="https://github.com/Ravenmaster9912/particulas.git" class="proyecto-link" data-i18n="proyecto_link">Ver repositorio GitHub →</a>
                 </div>
                 <div class="proyecto-tarjeta">
                     <div>
                         <div class="proyecto-tech">C++</div>
-                        <h3 class="proyecto-titulo">Sistema de gestión de llamadas.</h3>
-                        <p class="proyecto-desc">Aplicación de gestión de llamadas y personal de call center.</p>
+                        <h3 class="proyecto-titulo" data-i18n="sgll_titulo">Sistema de gestión de llamadas.</h3>
+                        <p class="proyecto-desc" data-i18n="sgll_descripcion">Aplicación de gestión de llamadas y personal de call center.</p>
                     </div>
-                    <a href="https://github.com/Ravenmaster9912/sistema-call-center" class="proyecto-link">Ver repositorio GitHub →</a>
+                    <a href="https://github.com/Ravenmaster9912/sistema-call-center" class="proyecto-link" data-i18n="proyecto_link">Ver repositorio GitHub →</a>
+                </div>
+                <div class="proyecto-tarjeta">
+                    <div>
+                        <div class="proyecto-tech">Laravel · Sail(Docker) · CloudFlare · Coolify · Local VPS</div>
+                        <h3 class="proyecto-titulo">Paint2gether.</h3>
+                        <p class="proyecto-desc" data-i18n="p2g_descripcion">Aplicación de dibujo compartido en tiempo real. (En desarrollo)</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="assets/img/paint.png" alt="paint2gether" style="width: 100%;">
+                    </div>
+                    <a href="https://github.com/Ravenmaster9912/paint2gether" class="proyecto-link" data-i18n="proyecto_link">Ver repositorio GitHub →</a>
                 </div>
             </div>
         </div>
@@ -102,9 +118,12 @@
 
     <section id="skills">
         <div class="contenedor">
-            <h2 class="seccion-titulo">Tecnologías</h2>
+            <h2 class="seccion-titulo" data-i18n="tecnologias">Tecnologías</h2>
             <div class="skills-lista">
                 <div class="skill-item">Laravel</div>
+                <div class="skill-item">Docker</div>
+                <div class="skill-item">CloudFlare</div>
+                <div class="skill-item">Coolify</div>
                 <div class="skill-item">JavaScript</div>
                 <div class="skill-item">PHP</div>
                 <div class="skill-item">HTML5 & CSS3</div>
@@ -120,15 +139,15 @@
 
     <section id="contacto">
         <div class="contenedor">
-            <h2 class="seccion-titulo">¿Tienes un proyecto en mente?</h2>
-            <p>Estoy disponible para trabajos freelance o puestos de tiempo completo. Si buscas a alguien detallista que valore el diseño limpio y el código bien estructurado, escríbeme.</p>
-            <a href="mailto:josedanielmartinez9912@hotmail.com" class="btn">Enviar un correo</a>
+            <h2 class="seccion-titulo" data-i18n="contacto_titulo">¿Tienes un proyecto en mente?</h2>
+            <p data-i18n="contacto_descripcion">Estoy disponible para trabajos freelance o puestos de tiempo completo. Si buscas a alguien detallista que valore el diseño limpio y el código bien estructurado, escríbeme.</p>
+            <a href="mailto:josedanielmartinez9912@hotmail.com" class="btn" data-i18n="correo">Enviar un correo</a>
         </div>
     </section>
 
     <footer>
         <p><span>2026.</span> Daniel Martinez.</p>
     </footer>
-
+    <script src="scripts.js"></script>
 </body>
 </html>
