@@ -1,7 +1,7 @@
 // Define your translations
 const translations = {
     en: {
-        inicio: "Introducion",
+        inicio: "Home",
         proyectos: "Projects",
         habilidades: "Skills",
         contacto: "Contact",
